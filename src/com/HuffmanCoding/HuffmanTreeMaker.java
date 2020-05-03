@@ -2,8 +2,16 @@ package com.HuffmanCoding;
 
 import java.util.ArrayList;
 
+/**
+ * Klasa <code>HuffmanTreeMaker</code> posiada statyczą funkcję układającą listę <code>HuffmanNode</code> w
+ * drzewo binarne
+ */
 public class HuffmanTreeMaker {
-//    private ArrayList<HuffmanNode> list;
+    /**
+     * Funkcja <code>makeTree</code> realizuje łączenie listy <code>HuffmanNode</code> w drzewo binarne
+     * @param list  lista węzłów
+     * @return zwraca korzeń drzewa
+     */
     public static HuffmanNode makeTree(ArrayList<HuffmanNode> list){
         list.sort(new HuffmanComparator());
         while(list.size() > 1){
@@ -15,7 +23,11 @@ public class HuffmanTreeMaker {
         }
         return list.get(0);
     }
-
+    /**
+     * Funkcja <code>makeTree</code> realizuje łączenie listy <code>HuffmanNode</code> w drzewo binarne
+     * @param data  tekst w oparciu o, który tworzone jest drzewo
+     * @return zwraca korzeń drzewa
+     */
     public static HuffmanNode makeTree(String data){
         ArrayList<HuffmanNode> list = CharacterCounter.calculate(data);
         return makeTree(list);

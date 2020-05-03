@@ -3,9 +3,17 @@ package com.HuffmanCoding;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Klasa <code>HuffmanDictionary</code> zawiera statyczne metody tworzące słownik słów kodowych koodwania Huffmana w
+ * oparciu o drzewo binarne
+ */
 public class HuffmanDictionary {
-//    private Map<Character, String> dictionary;
-
+    /**
+     * Funcja <code>createDictionary</code> tworzy słownik słów kodowych kodowania Huffmana
+     * @param root korzeń drzewa
+     * @param dictionary mapa do której ma być zapisany słownik
+     * @param str parametr pomocniczy wykożystywany w rekurencji. Jego wartość wywołania powinna być pustym łańcuchem ""
+     */
     public static void createDictionary(HuffmanNode root, Map<Character, String> dictionary, String str){
         if((root.getLeftNode() == null) &&
                 (root.getRightNode() == null) &&

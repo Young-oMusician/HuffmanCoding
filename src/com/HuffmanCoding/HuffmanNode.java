@@ -2,6 +2,9 @@ package com.HuffmanCoding;
 
 import java.io.Serializable;
 
+/**
+ * Klasa <code>HuffmanNode</code> jest węzłem drzewa binarnego wykorzystywanego przy kodowaniu Huffmana
+ */
 public class HuffmanNode implements Serializable {
     private char character;
     private int frequency;
@@ -13,6 +16,14 @@ public class HuffmanNode implements Serializable {
         return new String(" "+character+"->"+frequency+" ");
     }
 
+    /**
+     * Konstruktor obiektu
+     * @param character znak (<code>(char) 0</code> w przypadku węzła wewnętrznego)
+     * @param frequency jego częstotliwość występowania w zadanym tekście (suma częstotliwości lewego oraz prawego
+     *                  węzła-dziecka)
+     * @param leftNode referencja lewego węzła-dziecka
+     * @param rightNode referencja prawego węzła-dziecka
+     */
     public HuffmanNode(char character, int frequency, HuffmanNode leftNode, HuffmanNode rightNode) {
         this.character = character;
         this.frequency = frequency;

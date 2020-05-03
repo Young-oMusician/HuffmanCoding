@@ -5,10 +5,16 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.PriorityQueue;
 
+/**
+ * Klasa <code>CharacterCounter</code> zlicza liczbę wystąpień poszczególnych znaków w podanym tekście
+ */
 public class CharacterCounter{
-//    private String data;
-//    private Map<Character, Integer> characters;
-
+    /**
+     * Funkcja <code>calculate</code> oblicza ilość wystąpień poszczególnych znaków w podanym tekście
+     * @param data tekst do wyliczenia
+     * @return ArrayList<HuffmanNode> zwraca listę obiketów węzłów zawierających informację i znaku i jego
+     * częstotliwości występowania w tekście
+     */
     public static ArrayList<HuffmanNode> calculate(String data){
         Map<Character, Integer> characters = new HashMap<>();
         for(char character : data.toCharArray()){
