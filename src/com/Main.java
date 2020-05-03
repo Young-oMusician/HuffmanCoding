@@ -11,7 +11,7 @@ import java.util.*;
 
 public class Main {
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args){
 
 //        String data = new String("no nie wiem jak tak twoja szmaciura zrogowaciala niedzwiedzica");
 //        HuffmanNode root = HuffmanTreeMaker.makeTree(data);
@@ -88,7 +88,7 @@ public class Main {
                 int actualEncodedStringLength = 0;
                 byte[] encoded = null;
                 DataInputStream in = null;
-                
+
                 try{
                     rSocket = server.accept();
                     System.out.println("Connected");
