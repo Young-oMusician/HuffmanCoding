@@ -10,6 +10,7 @@ import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
+import java.util.HashMap;
 import java.util.Map;
 
 public class Sender {
@@ -26,6 +27,8 @@ public class Sender {
         this.data = data;
         this.portNumber = portNumber;
         this.address = address;
+        
+        this.dictionary = new HashMap<>();
     }
 
     public void encode(){
